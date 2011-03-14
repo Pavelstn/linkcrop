@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /PhpProject1/
+RewriteCond %{REQUEST_URI} smallurl$ [NC]
+RewriteRule .*  lib/index.php/$1 [L]
+RewriteRule ^([a-z0-9]+)/?$ lib/redirect.php?r=$1 [L]
+
+#RewriteRule ^smallurl$  lib/index.php/$1 [L]
+#RewriteRule ^smallurl$  lib/index.php/$1 [L]
+#RewriteRule ^([a-z0-9]+)/?$ redir.php?r=$1 [L]
+#RewriteRule ^$ lib/small.html
